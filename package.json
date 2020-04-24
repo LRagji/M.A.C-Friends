@@ -1,0 +1,26 @@
+{
+  "name": "m.a.c-friends",
+  "version": "0.0.1",
+  "description": "This package contains blocks which can be used to build a flexible software system using MAC Design Pattern.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LRagji/M.A.C-Friends.git"
+  },
+  "keywords": [
+    "M.A.C",
+    "Friends",
+    "Design",
+    "Pattern"
+  ],
+  "author": "Laukik",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/LRagji/M.A.C-Friends/issues"
+  },
+  "homepage": "https://github.com/LRagji/M.A.C-Friends#readme",
+  "dependencies": {}
+}

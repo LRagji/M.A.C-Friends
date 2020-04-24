@@ -1,0 +1,16 @@
+{
+  "name": "redis-channel",
+  "version": "1.0.0",
+  "description": "Redis based channel for MAC Channels",
+  "main": "redis-channel.js",
+  "scripts": {
+    "test": "npx mocha"
+  },
+  "author": "Laukik",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "mac-design-pattern": "0.0.1",
+    "redis-streams-broker": "0.0.1",
+    "shortid": "^2.2.15"
+  }
+}

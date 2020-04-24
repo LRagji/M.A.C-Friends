@@ -1,0 +1,14 @@
+{
+  "name": "simple-channel",
+  "version": "0.0.1",
+  "description": "Simple channel which can be used in single process hosting.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mac-design-pattern": "0.0.1"
+  }
+}
