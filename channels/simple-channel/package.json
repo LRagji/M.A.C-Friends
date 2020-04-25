@@ -9,7 +9,7 @@
   "author": "Laukik",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "mac-design-pattern": "0.0.4"
+    "mac-design-pattern": "0.0.5"
   },
   "devDependencies": {
     "typescript": "^3.8.3"

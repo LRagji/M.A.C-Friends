@@ -1,0 +1,19 @@
+{
+  "name": "rest-module",
+  "version": "0.0.1",
+  "description": "Rest module which enable rest full gateway to the system, part of M.A.C-Friends package",
+  "main": "dist/rest-module.js",
+  "scripts": {
+    "test": "npx mocha"
+  },
+  "keywords": [],
+  "author": "Laukik",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mac-design-pattern": "0.0.5"
+  }
+}

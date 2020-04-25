@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx mocha",
-    "build":"cd ./channels/redis-channel && npx tsc && cd ../simple-channel && npx tsc"
+    "build":"cd ./channels/redis-channel && npx tsc && cd ../simple-channel && npx tsc && cd ../../modules/rest-module && npx tsc"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,11 @@
     "Friends",
     "Design",
     "Pattern"
+  ],
+  "files":[
+    "channels/redis-channel/dist",
+    "channels/simple-channel/dist",
+    "modules/rest-module/dist"
   ],
   "bin": {
     "m.a.c-friends": "index.js"
