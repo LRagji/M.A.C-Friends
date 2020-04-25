@@ -1,12 +1,15 @@
 {
-  "name": "keyvalue-module",
+  "name": "mac-keyvalue-module",
   "version": "0.0.1",
-  "description": "Helps you to store key and value pairs in redis, part of M.A.C-Friends package",
+  "description": "This package is a module for MAC design pattern, This is a key value store based on redis.",
   "main": "dist/keyvalue-module.js",
   "scripts": {
     "test": "npx mocha"
   },
-  "keywords": [],
+  "keywords": [
+    "M.A.C",
+    "Key Value Module"
+  ],
   "author": "Laukik",
   "license": "BSD-2-Clause",
   "devDependencies": {
@@ -16,5 +19,13 @@
     "@types/ioredis": "^4.14.9",
     "ioredis": "^4.16.3",
     "mac-design-pattern": "0.0.5"
+  },
+  "bugs": {
+    "url": "https://github.com/LRagji/M.A.C-Friends/issues"
+  },
+  "homepage": "https://github.com/LRagji/M.A.C-Friends/tree/master/modules/keyvalue-module#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LRagji/M.A.C-Friends.git"
   }
 }
