@@ -1,12 +1,15 @@
 {
-  "name": "rest-module",
+  "name": "mac-rest-module",
   "version": "0.0.1",
-  "description": "Rest module which enable rest full gateway to the system, part of M.A.C-Friends package",
+  "description": "This package is a module for MAC design pattern, This is a rest gateway module based on express.",
   "main": "dist/rest-module.js",
   "scripts": {
     "test": "npx mocha"
   },
-  "keywords": [],
+  "keywords": [
+    "M.A.C",
+    "REST Module"
+  ],
   "author": "Laukik",
   "license": "BSD-2-Clause",
   "devDependencies": {
@@ -16,5 +19,13 @@
     "@types/express": "^4.17.6",
     "express": "^4.17.1",
     "mac-design-pattern": "0.0.5"
+  },
+  "bugs": {
+    "url": "https://github.com/LRagji/M.A.C-Friends/issues"
+  },
+  "homepage": "https://github.com/LRagji/M.A.C-Friends/tree/master/modules/rest-module#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LRagji/M.A.C-Friends.git"
   }
 }
