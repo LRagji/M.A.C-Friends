@@ -1,6 +1,6 @@
 {
   "name": "m.a.c-friends",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "This package contains blocks which can be used to build a flexible software system using MAC Design Pattern.",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,8 @@
   "files": [
     "channels/redis-channel/dist",
     "channels/simple-channel/dist",
-    "modules/rest-module/dist"
+    "modules/rest-module/dist",
+    "index.js"
   ],
   "bin": {
     "m.a.c-friends": "index.js"
