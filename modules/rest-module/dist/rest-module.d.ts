@@ -1,8 +1,9 @@
 import { MACModule, MACChannel } from "mac-design-pattern";
-import { Request, Response, express } from "express";
+import express = require("express");
 export declare class RestModule extends MACModule {
     #private;
-    constructor(channelManager: MACChannel, listeningPort: number, interceptor: (request: Request, response: Response, next: any) => {}, routeHandlers: express, instructionsResolver: ((instructionSetId: number) => Promise<((module: MACModule) => Promise<string | boolean>)[]>));
+    static moduleName: string;
+    constructor(channelManager: MACChannel);
     name(): string;
-    templateResolver(templateId: any): Promise<((module: MACModule) => Promise<string | boolean>)[]>;
+    listen(routeHandlers: express.Router, listeningPort: number): void;
 }

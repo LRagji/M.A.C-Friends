@@ -1,8 +1,8 @@
 {
-  "name": "rest-module",
+  "name": "keyvalue-module",
   "version": "0.0.1",
-  "description": "Rest module which enable rest full gateway to the system, part of M.A.C-Friends package",
-  "main": "dist/rest-module.js",
+  "description": "Helps you to store key and value pairs in redis, part of M.A.C-Friends package",
+  "main": "dist/keyvalue-module.js",
   "scripts": {
     "test": "npx mocha"
   },
@@ -13,8 +13,8 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "@types/express": "^4.17.6",
-    "express": "^4.17.1",
+    "@types/ioredis": "^4.14.9",
+    "ioredis": "^4.16.3",
     "mac-design-pattern": "0.0.5"
   }
 }

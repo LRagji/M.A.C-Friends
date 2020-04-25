@@ -6,7 +6,8 @@ const commandModuleMap = new Map();
 
 commandModuleMap.set("redis-channel", "channels/redis-channel");
 commandModuleMap.set("simple-channel", "channels/simple-channel");
-commandModuleMap.set("rest-module", "modules/rest-module")
+commandModuleMap.set("rest-module", "modules/rest-module");
+commandModuleMap.set("keyvalue-module", "modules/keyvalue-module")
 
 let componentName = process.argv[2];
 if (componentName !== undefined) {

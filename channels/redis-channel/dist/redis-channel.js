@@ -24,8 +24,8 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
 var _redisConnectionString, _channels, _maxMessageLimit;
 Object.defineProperty(exports, "__esModule", { value: true });
 const mac_design_pattern_1 = require("mac-design-pattern");
-const redis_streams_broker_1 = require("redis-streams-broker");
-const shortid_1 = require("shortid");
+const redisStreamBrokerType = require("redis-streams-broker");
+const shortid = require("shortid");
 const keyName = "A";
 const defaultGroupName = "Default";
 class RedisChannel extends mac_design_pattern_1.MACChannel {
@@ -44,7 +44,7 @@ class RedisChannel extends mac_design_pattern_1.MACChannel {
         return __awaiter(this, void 0, void 0, function* () {
             let channel = __classPrivateFieldGet(this, _channels).get(channelName);
             if (channel == undefined) {
-                channel = new redis_streams_broker_1.default(__classPrivateFieldGet(this, _redisConnectionString), channelName);
+                channel = new redisStreamBrokerType(__classPrivateFieldGet(this, _redisConnectionString), channelName);
                 __classPrivateFieldGet(this, _channels).set(channelName, channel);
             }
             const actorBuilderWrapper = (serializedActors) => __awaiter(this, void 0, void 0, function* () {
@@ -56,13 +56,14 @@ class RedisChannel extends mac_design_pattern_1.MACChannel {
                 ;
             });
             const cg = yield channel.joinConsumerGroup(defaultGroupName);
-            return yield cg.subscribe(shortid_1.default.generate(), actorBuilderWrapper);
+            return yield cg.subscribe(shortid.generate(), actorBuilderWrapper);
         });
     }
     teleport(channelName, actor) {
         return __awaiter(this, void 0, void 0, function* () {
             if (__classPrivateFieldGet(this, _channels).has(channelName)) {
-                const payload = { keyName: yield this.serialize(actor) };
+                const payload = {};
+                payload[keyName] = yield this.serialize(actor);
                 yield __classPrivateFieldGet(this, _channels).get(channelName).publish(payload, __classPrivateFieldGet(this, _maxMessageLimit));
                 return true;
             }

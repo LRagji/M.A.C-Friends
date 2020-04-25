@@ -1,6 +1,6 @@
 import { MACChannel, MACActor } from "mac-design-pattern";
-import redisStreamBrokerType from "redis-streams-broker";
-import shortid from 'shortid';
+import redisStreamBrokerType = require("redis-streams-broker");
+import shortid = require("shortid");
 const keyName = "A";
 const defaultGroupName = "Default";
 
@@ -18,7 +18,7 @@ export class RedisChannel extends MACChannel {
         this.#maxMessageLimit = maxMessageLimit;
     }
 
-    async registerModule(channelName:string, onActorReceivedHandler:(actor: MACActor) => Promise<boolean>) {
+    async registerModule(channelName: string, onActorReceivedHandler: (actor: MACActor) => Promise<boolean>) {
         let channel = this.#channels.get(channelName);
         if (channel == undefined) {
             channel = new redisStreamBrokerType(this.#redisConnectionString, channelName);
@@ -37,7 +37,8 @@ export class RedisChannel extends MACChannel {
 
     async teleport(channelName: string, actor: MACActor): Promise<boolean> {
         if (this.#channels.has(channelName)) {
-            const payload = { keyName: await this.serialize(actor) };
+            const payload = {};
+            payload[keyName] = await this.serialize(actor);
             await this.#channels.get(channelName).publish(payload, this.#maxMessageLimit);
             return true;
         }
