@@ -40,7 +40,7 @@ class RedisChannel extends mac_design_pattern_1.MACChannel {
         __classPrivateFieldSet(this, _channels, new Map());
         __classPrivateFieldSet(this, _maxMessageLimit, maxMessageLimit);
     }
-    registerModule(channelName, handler) {
+    registerModule(channelName, onActorReceivedHandler) {
         return __awaiter(this, void 0, void 0, function* () {
             let channel = __classPrivateFieldGet(this, _channels).get(channelName);
             if (channel == undefined) {
@@ -50,7 +50,7 @@ class RedisChannel extends mac_design_pattern_1.MACChannel {
             const actorBuilderWrapper = (serializedActors) => __awaiter(this, void 0, void 0, function* () {
                 for (let idx = 0; idx < serializedActors.length; idx++) {
                     const message = serializedActors[idx];
-                    yield handler(this.deserialize(message.payload[keyName]));
+                    yield onActorReceivedHandler(this.deserialize(message.payload[keyName]));
                     yield message.markAsRead();
                 }
                 ;
@@ -64,9 +64,9 @@ class RedisChannel extends mac_design_pattern_1.MACChannel {
             if (__classPrivateFieldGet(this, _channels).has(channelName)) {
                 const payload = { keyName: yield this.serialize(actor) };
                 yield __classPrivateFieldGet(this, _channels).get(channelName).publish(payload, __classPrivateFieldGet(this, _maxMessageLimit));
-                return Promise.resolve(true);
+                return true;
             }
-            return Promise.resolve(false);
+            return false;
         });
     }
 }

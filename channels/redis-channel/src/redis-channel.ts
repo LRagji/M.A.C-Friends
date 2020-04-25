@@ -18,7 +18,7 @@ export class RedisChannel extends MACChannel {
         this.#maxMessageLimit = maxMessageLimit;
     }
 
-    async registerModule(channelName, handler) {
+    async registerModule(channelName:string, onActorReceivedHandler:(actor: MACActor) => Promise<boolean>) {
         let channel = this.#channels.get(channelName);
         if (channel == undefined) {
             channel = new redisStreamBrokerType(this.#redisConnectionString, channelName);
@@ -27,7 +27,7 @@ export class RedisChannel extends MACChannel {
         const actorBuilderWrapper = async (serializedActors) => {
             for (let idx = 0; idx < serializedActors.length; idx++) {
                 const message = serializedActors[idx];
-                await handler(this.deserialize(message.payload[keyName]));
+                await onActorReceivedHandler(this.deserialize(message.payload[keyName]));
                 await message.markAsRead();
             };
         }

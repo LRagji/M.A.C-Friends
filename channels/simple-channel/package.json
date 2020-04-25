@@ -1,14 +1,17 @@
 {
   "name": "simple-channel",
   "version": "0.0.1",
-  "description": "Simple channel which can be used in single process hosting.",
-  "main": "index.js",
+  "description": "Simple channel for a single process MAC Channels, part of M.A.C-Friends package",
+  "main": "dist/simple-channel.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx mocha"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Laukik",
+  "license": "BSD-2-Clause",
   "dependencies": {
-    "mac-design-pattern": "0.0.1"
+    "mac-design-pattern": "0.0.4"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
   }
 }
