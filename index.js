@@ -8,19 +8,18 @@ commandModuleMap.set("redis-channel", "channels/redis-channel");
 commandModuleMap.set("simple-channel", "channels/simple-channel");
 commandModuleMap.set("rest-module", "modules/rest-module");
 commandModuleMap.set("keyvalue-module", "modules/keyvalue-module")
+let commandName = process.argv[2];
+let args = process.argv.splice(2, (process.argv.length - 3));
 
-let componentName = process.argv[2];
-if (componentName !== undefined) {
-    componentName = componentName.toLowerCase();
-    if (commandModuleMap.has(componentName)) {
-        const commandModulePath = path.join(process.cwd(),"/node_modules/m.a.c-friends/" ,commandModuleMap.get(componentName));
-        console.log(commandModulePath);
-        spawn("npm", ["install", commandModulePath], { stdio: 'inherit', shell: true });
-    }
-    else {
-        console.error("Invalid command " + componentName);
-    }
+for (let idx = 0; idx < commandModuleMap.keys; idx++) {
+    const key = commandModuleMap.keys[idx];
+    console.log("Running " + commandName + " for " + key);
+    //let cwdpath=path.join()
+    spawn(commandName, args, { stdio: 'inherit', shell: true, cwd: commandModuleMap.get(key) });
+    await waitForProcessExit();
 }
-else {
-    console.error("Missing command");
+
+async function waitForProcessExit(child_process)
+{
+    child_process.on
 }

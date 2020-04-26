@@ -18,7 +18,7 @@
   "dependencies": {
     "@types/express": "^4.17.6",
     "express": "^4.17.1",
-    "mac-design-pattern": "0.0.5"
+    "mac-design-pattern": "0.0.6"
   },
   "bugs": {
     "url": "https://github.com/LRagji/M.A.C-Friends/issues"

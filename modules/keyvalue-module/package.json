@@ -1,6 +1,6 @@
 {
   "name": "mac-keyvalue-module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This package is a module for MAC design pattern, This is a key value store based on redis.",
   "main": "dist/keyvalue-module.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "dependencies": {
     "@types/ioredis": "^4.14.9",
     "ioredis": "^4.16.3",
-    "mac-design-pattern": "0.0.5"
+    "mac-design-pattern": "0.0.6"
   },
   "bugs": {
     "url": "https://github.com/LRagji/M.A.C-Friends/issues"
