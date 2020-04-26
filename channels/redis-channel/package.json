@@ -1,7 +1,7 @@
 {
-  "name": "redis-channel",
+  "name": "mac-redis-channel",
   "version": "0.0.1",
-  "description": "Redis based channel for MAC Channels, part of M.A.C-Friends package",
+  "description": "This package is a channel for MAC design pattern, This is a cross process or single process channel based on redis stream datatype",
   "main": "dist/redis-channel.js",
   "scripts": {
     "test": "npx mocha",
@@ -16,5 +16,13 @@
   },
   "devDependencies": {
     "typescript": "^3.8.3"
+  },
+  "bugs": {
+    "url": "https://github.com/LRagji/M.A.C-Friends/issues"
+  },
+  "homepage": "https://github.com/LRagji/M.A.C-Friends/tree/master/channels/redis-channel#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LRagji/M.A.C-Friends.git"
   }
 }

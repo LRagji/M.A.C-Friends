@@ -1,7 +1,7 @@
 {
-  "name": "simple-channel",
+  "name": "mac-simple-channel",
   "version": "0.0.1",
-  "description": "Simple channel for a single process MAC Channels, part of M.A.C-Friends package",
+  "description": "This package is a channel for MAC design pattern, This is a simple channel implementation for single process.",
   "main": "dist/simple-channel.js",
   "scripts": {
     "test": "npx mocha"
@@ -13,5 +13,13 @@
   },
   "devDependencies": {
     "typescript": "^3.8.3"
+  },
+  "bugs": {
+    "url": "https://github.com/LRagji/M.A.C-Friends/issues"
+  },
+  "homepage": "https://github.com/LRagji/M.A.C-Friends/tree/master/channels/simple-channel#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LRagji/M.A.C-Friends.git"
   }
 }
