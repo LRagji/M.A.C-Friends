@@ -40,6 +40,7 @@ export class KeyValueModule extends MACModule {
     }
 
     async get(keyname: string): Promise<string> {
+        keyname = this.#prefix + keyname;
         return await this.#redis.get(keyname);
     }
 }
