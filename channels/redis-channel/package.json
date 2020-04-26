@@ -1,6 +1,6 @@
 {
   "name": "mac-redis-channel",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This package is a channel for MAC design pattern, This is a cross process or single process channel based on redis stream datatype",
   "main": "dist/redis-channel.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "mac-design-pattern": "0.0.6",
-    "redis-streams-broker": "0.0.1",
+    "redis-streams-broker": "0.0.4",
     "shortid": "^2.2.15"
   },
   "devDependencies": {

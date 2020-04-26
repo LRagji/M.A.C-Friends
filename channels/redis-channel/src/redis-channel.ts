@@ -21,7 +21,7 @@ export class RedisChannel extends MACChannel {
     async registerModule(channelName: string, onActorReceivedHandler: (actor: MACActor) => Promise<boolean>) {
         let channel = this.#channels.get(channelName);
         if (channel == undefined) {
-            channel = new redisStreamBrokerType(this.#redisConnectionString, channelName);
+            channel = new redisStreamBrokerType.StreamChannelBroker(this.#redisConnectionString, channelName);
             this.#channels.set(channelName, channel);
         }
         const actorBuilderWrapper = async (serializedActors) => {
