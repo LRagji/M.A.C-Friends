@@ -1,0 +1,33 @@
+{
+  "name": "mac-http-module",
+  "version": "0.0.1",
+  "description": "This package is a module for MAC design pattern, This is http request gateway for making http calls to other systems.",
+  "main": "dist/http-module.js",
+  "scripts": {
+    "test": "npx mocha"
+  },
+  "keywords": [
+    "M.A.C",
+    "Http Module"
+  ],
+  "author": "Laukik",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "@types/request-promise-native": "^1.0.17",
+    "mocha": "^7.1.2",
+    "sinon": "^9.0.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "bent": "^7.3.0",
+    "mac-design-pattern": "0.0.6"
+  },
+  "bugs": {
+    "url": "https://github.com/LRagji/M.A.C-Friends/issues"
+  },
+  "homepage": "https://github.com/LRagji/M.A.C-Friends/tree/master/modules/http-module#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LRagji/M.A.C-Friends.git"
+  }
+}
